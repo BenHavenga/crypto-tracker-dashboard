@@ -152,7 +152,13 @@ export default function Dashboard() {
               <label className="text-sm">Sort</label>
               <select
                 value={sortKey}
-                onChange={(e) => setSortKey(e.target.value as any)}
+                onChange={(e) =>
+                  setSortKey(
+                    e.target.value as
+                      | "market_cap"
+                      | "price_change_percentage_24h"
+                  )
+                }
                 className="rounded border px-2 py-1 bg-white dark:bg-neutral-800 dark:border-neutral-700 text-sm"
               >
                 <option value="market_cap">Market Cap</option>
